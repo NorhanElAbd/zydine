@@ -59,6 +59,10 @@
   margin-top: 6em;
 }
 
+.power {
+  font-size: 14px;
+}
+
 .dot-collision {
   position: relative;
   width: 10px;

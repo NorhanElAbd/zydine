@@ -20,7 +20,7 @@ const Posts = () => {
   const formatContent = (content, mention) => {
     if (mention) {
       const store = Object.keys(mention[0])[0];
-      const link = `https://${mention[0][store]}`;
+      const link = mention[0][store];
       return reactStringReplace(content, store, (match) => (
         <a href={link} target="_blank" className="post-list">
           {match}

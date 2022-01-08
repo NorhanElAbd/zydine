@@ -2,7 +2,7 @@
   background-color: #000;
   padding: 24px 22px;
   max-width: 345px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .main_header {

@@ -4,7 +4,6 @@ import { addComment, love, share } from "../../assets/images";
 import reactStringReplace from "react-string-replace";
 import axios from "axios";
 import { DateTime } from "luxon";
-import data from "./data";
 
 const Posts = () => {
   const [postsData, getPostsData] = useState();
@@ -30,7 +29,7 @@ const Posts = () => {
     }
   };
 
-  if (!data)
+  if (!postsData)
     return (
       <div className="stage">
         <div className="dot-collision"></div>
@@ -39,7 +38,7 @@ const Posts = () => {
 
   return (
     <>
-      {data.map((post) => (
+      {postsData.map((post) => (
         <div className="posts" key={post.id}>
           <div className="post_profile">
             <img src={post.user.avatar} />

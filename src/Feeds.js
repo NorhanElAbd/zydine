@@ -16,7 +16,9 @@ const Feeds = () => {
       </div>
       <PhotoCards />
       <div className="main_content">
-        <h2 className="main_content-title">Feed</h2>
+        <h2 className="main_content-title">
+          Feed<sup className="power">2</sup>
+        </h2>
         <div>
           <span className="main_content-filter main_content-filter--selected">
             Friends

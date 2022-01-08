@@ -1,0 +1,122 @@
+.posts {
+  color: #fff;
+  display: flex;
+  padding: 15px 0 10px;
+  border-bottom: 1px solid #9a9797;
+}
+
+.posts:last-child {
+  border-bottom: none;
+}
+
+.post_profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+.posts_details {
+  margin-left: 18px;
+}
+.posts_details-user {
+  font-size: 15px;
+}
+.posts_details-user .time {
+  font-size: 10px;
+}
+.posts_details-content {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.posts_details-actions {
+  display: flex;
+}
+
+.posts_details-actions .action {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.posts_details-actions .action img {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.posts_details-actions .action span {
+  font-size: 10px;
+}
+
+.post-list {
+  color: yellow;
+}
+
+.stage {
+  width: 30px;
+  margin: auto;
+  height: 100%;
+  margin-top: 6em;
+}
+
+.dot-collision {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: yellow;
+  color: yellow;
+}
+
+.dot-collision::before,
+.dot-collision::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-collision::before {
+  left: -10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: yellow;
+  color: yellow;
+  animation: dotCollisionBefore 2s infinite ease-in;
+}
+
+.dot-collision::after {
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: yellow;
+  color: yellow;
+  animation: dotCollisionAfter 2s infinite ease-in;
+  animation-delay: 1s;
+}
+
+@keyframes dotCollisionBefore {
+  0%,
+  50%,
+  75%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-15px);
+  }
+}
+
+@keyframes dotCollisionAfter {
+  0%,
+  50%,
+  75%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(15px);
+  }
+}
